@@ -26,7 +26,6 @@
   </header>
 
   <!-- Hero секција -->
-    <!-- Hero секција -->
   <section class="hero" id="home">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -34,7 +33,6 @@
       <p>Широк избор на керамички плочки, санитарија и модерни туш-кабини. Брза испорака, професионална монтажа и врвен квалитет.</p>
     </div>
   </section>
-
 
   <!-- За нас -->
   <section id="about">
@@ -91,61 +89,58 @@
     </div>
   </section>
 
+  <!-- === ГАЛЕРИЈА === -->
+  <section id="gallery">
+    <h2>Галерија</h2>
 
- <!-- === ГАЛЕРИЈА === -->
-<section id="gallery">
-  <h2>Галерија</h2>
+    <div class="gallery-grid" id="gallery-grid">
+      <!-- Замени ги патеките со твоите слики во /assets/gallery/ -->
+      <img src="assets/gallery/01.jpg" alt="Проект 1" data-lightbox>
+      <img src="assets/gallery/02.jpg" alt="Проект 2" data-lightbox>
+      <img src="assets/gallery/03.jpg" alt="Проект 3" data-lightbox>
+      <img src="assets/gallery/04.jpg" alt="Проект 4" data-lightbox>
+      <img src="assets/gallery/05.jpg" alt="Проект 5" data-lightbox>
+      <img src="assets/gallery/06.jpg" alt="Проект 6" data-lightbox>
+    </div>
+  </section>
 
-  <div class="gallery-grid">
-    <!-- Замени ги патеките со твоите слики во /assets/gallery/ -->
-    <img src="assets/gallery/01.jpg" alt="Проект 1">
-    <img src="assets/gallery/02.jpg" alt="Проект 2">
-    <img src="assets/gallery/03.jpg" alt="Проект 3">
-    <img src="assets/gallery/04.jpg" alt="Проект 4">
-    <img src="assets/gallery/05.jpg" alt="Проект 5">
-    <img src="assets/gallery/06.jpg" alt="Проект 6">
+  <!-- Lightbox (JS го управува) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="close" aria-label="Затвори">&times;</button>
+    <img id="lightbox-img" src="" alt="">
   </div>
-</section>
-
-<!-- Lightbox (останува празно, JS го полни) -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <button class="lightbox-close" aria-label="Затвори">&times;</button>
-  <img id="lightbox-img" src="" alt="">
-</div>
-
 
   <!-- Контакт -->
- <section id="contact" class="contact">
-  <h2>Контакт</h2>
-  <div class="contact-container">
+  <section id="contact" class="contact">
+    <h2>Контакт</h2>
+    <div class="contact-container">
 
-    <!-- Лева страна: информации -->
-    <div class="contact-info">
-      <p><strong>📍 Адреса:</strong> ул.Климент Охридски бр.25 Добрејци</p>
-      <p><strong>📞 Телефон:</strong> + 034 327 533</p>
-      <p><strong>📧 Е-пошта:</strong> info@keramika-stil.mk</p>
-      <p><strong>🕑 Работно време:</strong><br>
-        Пон – Пет: 08:00 – 20:00<br>
-        Сабота: 08:00 – 17:00<br>
-        Недела: не работиме
-      </p>
+      <!-- Лева страна: информации -->
+      <div class="contact-info">
+        <p><strong>📍 Адреса:</strong> ул.Климент Охридски бр.25 Добрејци</p>
+        <p><strong>📞 Телефон:</strong> + 034 327 533</p>
+        <p><strong>📧 Е-пошта:</strong> info@keramika-stil.mk</p>
+        <p><strong>🕑 Работно време:</strong><br>
+          Пон – Пет: 08:00 – 20:00<br>
+          Сабота: 08:00 – 17:00<br>
+          Недела: не работиме
+        </p>
+      </div>
+
+      <!-- Десна страна: Google Maps -->
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.8882049162925!2d22.640647115401235!3d41.44805767858021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a9ff96c2c19c1f%3A0x185725c8da63ba3a!2sКерамика%20Стил!5e0!3m2!1sen!2smk!4v1692649199999!5m2!1sen!2smk"
+          width="100%"
+          height="320"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
     </div>
-
-    <!-- Десна страна: Google Maps -->
-    <div class="contact-map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.8882049162925!2d22.640647115401235!3d41.44805767858021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a9ff96c2c19c1f%3A0x185725c8da63ba3a!2sКерамика%20Стил!5e0!3m2!1sen!2smk!4v1692649199999!5m2!1sen!2smk"
-        width="100%"
-        height="320"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-
-  </div>
-</section>
-
+  </section>
 
   <!-- Побарај понуда -->
   <section id="offer">
@@ -169,5 +164,7 @@
     <p>&copy; 2025 Керамика Стил. Сите права задржани.</p>
   </footer>
 
+  <!-- Вчитај JS (smooth scroll, lightbox, динамичко полнење, итн.) -->
+  <script src="script.js"></script>
 </body>
 </html>
