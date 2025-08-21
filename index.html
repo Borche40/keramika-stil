@@ -53,58 +53,54 @@
     </div>
   </section>
 
-  <!-- Производи -->
+  <!-- Производи (моментално со пример-слики од галеријата) -->
   <section id="products" class="products">
     <h2>Наши производи</h2>
     <p class="lead">Погледнете дел од нашата понуда со најпродавани категории</p>
 
     <div class="product-grid">
-      <!-- Картичка 1 -->
       <div class="product-card">
-        <img src="assets/tiles.jpg" alt="Керамички плочки">
+        <img src="gallery01.jpg" alt="Керамички плочки">
         <h3>Керамички плочки</h3>
         <p>Современи плочки со врвен квалитет за бањи, кујни и подови.</p>
       </div>
 
-      <!-- Картичка 2 -->
       <div class="product-card">
-        <img src="assets/sanitary.jpg" alt="Санитарија">
+        <img src="gallery02.jpg" alt="Санитарија">
         <h3>Санитарија</h3>
         <p>WC школки, лавабоа, туш кабини и многу повеќе.</p>
       </div>
 
-      <!-- Картичка 3 -->
       <div class="product-card">
-        <img src="assets/bathroom.jpg" alt="Бањарии и туш кабини">
+        <img src="gallery03.jpg" alt="Бањарии и туш кабини">
         <h3>Бањарии и туш кабини</h3>
         <p>Модерни решенија за комплетно уредување на бањи.</p>
       </div>
 
-      <!-- Картичка 4 -->
       <div class="product-card">
-        <img src="assets/tools.jpg" alt="Алат и монтажа">
+        <img src="gallery04.jpg" alt="Алат и монтажа">
         <h3>Алат и монтажа</h3>
         <p>Сè што ви треба за професионална инсталација и монтажа.</p>
       </div>
     </div>
   </section>
 
-  <!-- === ГАЛЕРИЈА === -->
+  <!-- Галерија -->
   <section id="gallery">
     <h2>Галерија</h2>
 
     <div class="gallery-grid" id="gallery-grid">
-      <!-- Замени ги патеките со твоите слики во /assets/gallery/ -->
-      <img src="assets/gallery/01.jpg" alt="Проект 1" data-lightbox>
-      <img src="assets/gallery/02.jpg" alt="Проект 2" data-lightbox>
-      <img src="assets/gallery/03.jpg" alt="Проект 3" data-lightbox>
-      <img src="assets/gallery/04.jpg" alt="Проект 4" data-lightbox>
-      <img src="assets/gallery/05.jpg" alt="Проект 5" data-lightbox>
-      <img src="assets/gallery/06.jpg" alt="Проект 6" data-lightbox>
+      <!-- Сликите ти се во root, па патеките се директни -->
+      <img src="gallery01.jpg" alt="Проект 1" data-lightbox>
+      <img src="gallery02.jpg" alt="Проект 2" data-lightbox>
+      <img src="gallery03.jpg" alt="Проект 3" data-lightbox>
+      <img src="gallery04.jpg" alt="Проект 4" data-lightbox>
+      <img src="gallery05.jpg" alt="Проект 5" data-lightbox>
+      <img src="gallery06.jpg" alt="Проект 6" data-lightbox>
     </div>
   </section>
 
-  <!-- Lightbox (JS го управува) -->
+  <!-- Lightbox -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="close" aria-label="Затвори">&times;</button>
     <img id="lightbox-img" src="" alt="">
@@ -115,7 +111,6 @@
     <h2>Контакт</h2>
     <div class="contact-container">
 
-      <!-- Лева страна: информации -->
       <div class="contact-info">
         <p><strong>📍 Адреса:</strong> ул.Климент Охридски бр.25 Добрејци</p>
         <p><strong>📞 Телефон:</strong> + 034 327 533</p>
@@ -127,7 +122,6 @@
         </p>
       </div>
 
-      <!-- Десна страна: Google Maps -->
       <div class="contact-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.8882049162925!2d22.640647115401235!3d41.44805767858021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a9ff96c2c19c1f%3A0x185725c8da63ba3a!2sКерамика%20Стил!5e0!3m2!1sen!2smk!4v1692649199999!5m2!1sen!2smk"
@@ -164,7 +158,7 @@
     <p>&copy; 2025 Керамика Стил. Сите права задржани.</p>
   </footer>
 
-  <!-- Вчитај JS (smooth scroll, lightbox, динамичко полнење, итн.) -->
-  <script src="script.js"></script>
+  <!-- JS -->
+  <script src="js/app.js"></script>
 </body>
 </html>
