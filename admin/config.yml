@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway  # for Netlify; alternatively: github
+  branch: main
+
+media_folder: "assets/uploads"   # files in repo
+public_folder: "/assets/uploads" # served path
+
+site_url: "/"
+logo_url: "/favicon.svg"
+
+collections:
+  - name: "home"
+    label: "Почетна (Hero)"
+    files:
+      - file: "content/home.json"
+        label: "Hero содржина"
+        name: "home"
+        fields:
+          - {label: "Наслов", name: "hero_title", widget: "string"}
+          - {label: "Поднаслов", name: "hero_subtitle", widget: "text"}
+          - {label: "CTA 1", name: "cta_primary_text", widget: "string"}
+          - {label: "CTA 2", name: "cta_secondary_text", widget: "string"}
+  - name: "products"
+    label: "Категории (Производи)"
+    label_singular: "Категорија"
+    folder: "content"
+    create: false
+    delete: false
+    files:
+      - file: "content/products.json"
+        label: "Листа на категории"
+        name: "products_list"
+        fields:
+          - label: "Категории"
+            name: ""
+            widget: "list"
+            fields:
+              - {label: "Наслов", name: "title", widget: "string"}
+              - {label: "Опис", name: "description", widget: "text", required: false}
+              - {label: "Слика", name: "image", widget: "image"}
+  - name: "gallery"
+    label: "Галерија"
+    files:
+      - file: "content/gallery.json"
+        label: "Слики"
+        name: "gallery"
+        fields:
+          - label: "Слики"
+            name: ""
+            widget: "list"
+            fields:
+              - {label: "Слика", name: "image", widget: "image"}
+              - {label: "Alt текст", name: "alt", widget: "string", required: false}
+  - name: "contact"
+    label: "Контакт"
+    files:
+      - file: "content/contact.json"
+        label: "Инфо"
+        name: "contact"
+        fields:
+          - {label: "Телефон", name: "phone", widget: "string"}
+          - {label: "Е-пошта", name: "email", widget: "string"}
+          - {label: "Град", name: "city", widget: "string", required: false}
+          - {label: "Работно време", name: "hours", widget: "string", required: false}
+          - {label: "Google Maps Embed URL", name: "map_embed", widget: "text", required: false}

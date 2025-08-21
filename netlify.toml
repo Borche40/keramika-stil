@@ -1,0 +1,17 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=()"
+
+# Enable pretty URLs (optional)
+[build]
+  publish = "."
+
+# Redirect /admin to admin index (safety if needed)
+[[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 200

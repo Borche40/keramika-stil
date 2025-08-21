@@ -1,0 +1,26 @@
+[
+  {
+    "image": "assets/gallery-1.jpg",
+    "alt": "Проект 1"
+  },
+  {
+    "image": "assets/gallery-2.jpg",
+    "alt": "Проект 2"
+  },
+  {
+    "image": "assets/gallery-3.jpg",
+    "alt": "Проект 3"
+  },
+  {
+    "image": "assets/gallery-4.jpg",
+    "alt": "Проект 4"
+  },
+  {
+    "image": "assets/gallery-5.jpg",
+    "alt": "Проект 5"
+  },
+  {
+    "image": "assets/gallery-6.jpg",
+    "alt": "Проект 6"
+  }
+]

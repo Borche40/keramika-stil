@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Керамички плочки",
+    "description": "Подни и ѕидни плочки во различни димензии и текстури.",
+    "image": "assets/gallery-1.jpg"
+  },
+  {
+    "title": "Санитарија",
+    "description": "Лавабоа, WC школки, туш ладици и повеќе.",
+    "image": "assets/gallery-2.jpg"
+  },
+  {
+    "title": "Туш кабини",
+    "description": "Квалитетни стаклени решенија со црна рамка и модерен стил.",
+    "image": "assets/gallery-3.jpg"
+  },
+  {
+    "title": "Аксесоари",
+    "description": "Славини, туш системи, огледала со LED и друго.",
+    "image": "assets/gallery-4.jpg"
+  }
+]
