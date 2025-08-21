@@ -1,90 +1,177 @@
 <!DOCTYPE html>
 <html lang="mk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Керамика Стил</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Керамика Стил</title>
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Навигација -->
-    <header>
-        <div class="container">
-            <h1 class="logo">Керамика Стил</h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#about">За нас</a></li>
-                    <li><a href="#products">Производи</a></li>
-                    <li><a href="#gallery">Галерија</a></li>
-                    <li><a href="#contact">Контакт</a></li>
-                    <li><a href="#offer" class="btn">Побарај понуда</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero секција -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Квалитетна керамика за вашиот дом и бизнис</h2>
-            <p>Широк избор на керамички плочки, санитарија и модерни туш-кабини. Брза испорака, професионална монтажа и врвен квалитет.</p>
-        </div>
-    </section>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">
+        <span class="mark"></span> Керамика Стил
+      </a>
+      <nav>
+        <a href="#about">За нас</a>
+        <a href="#products">Производи</a>
+        <a href="#gallery">Галерија</a>
+        <a href="#contact" class="btn">Контакт</a>
+        <a href="#quote" class="btn primary">Побарај понуда</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- About секција -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Зошто Керамика Стил?</h2>
-            <div class="about-grid">
-                <div>
-                    <h3>Висок квалитет</h3>
-                    <p>Современа керамика од водечки европски производители.</p>
-                </div>
-                <div>
-                    <h3>Брза испорака</h3>
-                    <p>Ефикасна логистика и навремена достава низ цела земја.</p>
-                </div>
-                <div>
-                    <h3>Професионална монтажа</h3>
-                    <p>Искусни мајстори за беспрекорна изведба и детали.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- HERO (без копчиња во позадинската слика) -->
+  <section id="home" class="hero" role="banner">
+    <div class="overlay" aria-hidden="true"></div>
+    <div class="container">
+      <h1>Квалитетна керамика за вашиот дом и бизнис</h1>
+      <p>Широк избор на керамички плочки, санитарија и модерни туш-кабини.
+        Брза испорака, професионална монтажа и врвен квалитет.</p>
+      <!-- Нема CTA тука по твоја желба -->
+    </div>
+  </section>
 
-    <!-- Производи -->
-    <section id="products" class="products">
-        <div class="container">
-            <h2>Наши производи</h2>
-            <ul>
-                <li>Керамички плочки</li>
-                <li>Санитарија</li>
-                <li>Туш-кабини</li>
-                <li>Додатоци</li>
-            </ul>
-        </div>
-    </section>
+  <!-- Зошто Керамика Стил -->
+  <section class="section" id="why">
+    <div class="container">
+      <h2>Зошто Керамика Стил?</h2>
+      <p class="lead">Комбинираме врвен квалитет, модерен дизајн и професионална услуга.</p>
 
-    <!-- Галерија -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2>Галерија</h2>
-            <p>Избрани изведби од нашите проекти.</p>
+      <div class="cards">
+        <div class="card">
+          <img src="hero.jpg" alt="Керамика – пример 1">
+          <div class="p">
+            <span class="badge">Висок квалитет</span>
+            <p>Селектирана керамика од водечки европски производители.</p>
+          </div>
         </div>
-    </section>
+        <div class="card">
+          <img src="hero.jpg" alt="Керамика – пример 2">
+          <div class="p">
+            <span class="badge">Брза испорака</span>
+            <p>Ефикасна логистика и навремена достава низ цела земја.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="hero.jpg" alt="Керамика – пример 3">
+          <div class="p">
+            <span class="badge">Професионална монтажа</span>
+            <p>Искусни мајстори за беспрекорна изведба и детали.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="hero.jpg" alt="Керамика – пример 4">
+          <div class="p">
+            <span class="badge">Поддршка</span>
+            <p>Советување при избор, дизајн и комплетно решение.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Контакт -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Контакт</h2>
-            <p>Испратете ни порака за повеќе информации.</p>
-        </div>
-    </section>
+  <!-- Производи -->
+  <section class="section" id="products">
+    <div class="container">
+      <h2>Наши производи</h2>
+      <p class="lead">Керамички плочки, санитарија, туш-кабини и додатоци.</p>
+    </div>
+  </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Керамика Стил. Сите права задржани.</p>
-        </div>
-    </footer>
+  <!-- Галерија -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <h2>Галерија</h2>
+      <div class="gallery-grid">
+        <img src="hero.jpg" alt="Проект 1" data-lightbox>
+        <img src="hero.jpg" alt="Проект 2" data-lightbox>
+        <img src="hero.jpg" alt="Проект 3" data-lightbox>
+        <img src="hero.jpg" alt="Проект 4" data-lightbox>
+        <img src="hero.jpg" alt="Проект 5" data-lightbox>
+        <img src="hero.jpg" alt="Проект 6" data-lightbox>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакт -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div>
+        <h2>Контакт</h2>
+        <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact">
+          <div class="input">
+            <label>Име и презиме</label>
+            <input name="name" required>
+          </div>
+          <div class="input">
+            <label>Email</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="input">
+            <label>Порака</label>
+            <textarea name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn primary" type="submit">Испрати</button>
+        </form>
+      </div>
+      <div class="contact-card">
+        <h3>Керамика Стил</h3>
+        <p>Тел: +389 XX XXX XXXX</p>
+        <p>Email: info@primer.mk</p>
+        <p>Работно време: Пон–Саб 09–19h</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container content">
+      <div>
+        <strong>Керамика Стил</strong>
+        <p>Квалитетна керамика за дом и бизнис.</p>
+      </div>
+      <div>
+        <a href="#about">За нас</a><br>
+        <a href="#products">Производи</a><br>
+        <a href="#gallery">Галерија</a>
+      </div>
+      <div>
+        <a href="#contact">Контакт</a><br>
+        <a href="#quote">Понуда</a>
+      </div>
+    </div>
+    <div class="copy">
+      <div class="container">© <span id="y"></span> Керамика Стил</div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lb">
+    <button class="close" aria-label="Затвори">✕</button>
+    <img src="" alt="">
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Simple lightbox
+    const lb   = document.getElementById('lb');
+    const lbImg= lb.querySelector('img');
+    document.querySelectorAll('[data-lightbox]').forEach(img=>{
+      img.addEventListener('click', ()=>{
+        lbImg.src = img.src;
+        lb.classList.add('active');
+      });
+    });
+    lb.addEventListener('click', (e)=>{
+      if(e.target === lb || e.target.classList.contains('close')){
+        lb.classList.remove('active');
+        lbImg.src = '';
+      }
+    });
+  </script>
 </body>
 </html>
