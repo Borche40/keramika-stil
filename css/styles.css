@@ -107,7 +107,7 @@ body {
   line-height: 1.6;
 }
 
-/* Секции */
+/* Секции (општо) */
 section {
   padding: 60px 40px;
 }
@@ -125,6 +125,51 @@ h2 {
   background: #f9f9f9;
   border-radius: 8px;
   text-align: center;
+}
+
+/* =========================
+   ПРОИЗВОДИ — КАРТИЧКИ
+   ========================= */
+.products {
+  background: #f9f9f9;
+  text-align: center;
+}
+.products .lead {
+  color: #555;
+  margin: -10px 0 30px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display:block;
+}
+.product-card h3 {
+  margin: 14px 14px 6px;
+  font-size: 19px;
+  color: #222;
+}
+.product-card p {
+  margin: 0 14px 16px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.55;
 }
 
 /* Формата */
@@ -162,4 +207,20 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px;
+}
+
+/* =========================
+   RESPONSIVE мали екрани
+   ========================= */
+@media (max-width: 860px) {
+  .nav-links { gap: 16px; }
+  .site-title { font-size: 30px; }
+  .logo img { height: 60px; }
+  .hero-content h1 { font-size: 36px; }
+  .hero-content p { font-size: 18px; }
+}
+@media (max-width: 600px) {
+  section { padding: 44px 20px; }
+  .nav-links a { font-size: 16px; }
+  .product-card img { height: 180px; }
 }
