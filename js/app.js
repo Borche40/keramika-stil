@@ -77,7 +77,7 @@ document.getElementById('contact-form')?.addEventListener('submit', (e)=>{
   const body = encodeURIComponent(
     'Име: ' + name +
     '\nТелефон: ' + phone +
-    '\нЕ-пошта: ' + email +
+    '\nЕ-пошта: ' + email +
     '\n\nПорака:\n' + message
   );
 
