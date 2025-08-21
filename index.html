@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="mk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Керамика Стил</title>
-  <link rel="stylesheet" href="css/styles.css"/>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <!-- Навигација -->
   <header>
     <nav class="navbar">
-      <a href="#home" class="logo" aria-label="Керамика Стил">
-        <img src="logo.png" onerror="this.onerror=null;this.src='logo.jpg';" alt="Керамика Стил лого"/>
-        <span class="brand-name">Керамика Стил</span>
-      </a>
-
+      <div class="logo">
+        <img src="logo.png" alt="Керамика Стил Лого">
+        <span class="site-title">Керамика Стил</span>
+      </div>
       <ul class="nav-links">
         <li><a href="#about">За нас</a></li>
         <li><a href="#products">Производи</a></li>
@@ -27,138 +25,75 @@
     </nav>
   </header>
 
-  <!-- HERO (без CTA копчиња) -->
-  <section id="home" class="hero" role="banner" aria-label="Керамика Стил">
-    <div class="overlay" aria-hidden="true"></div>
-    <div class="container">
+  <!-- Hero секција -->
+  <section class="hero" id="home">
+    <div class="hero-content">
       <h1>Квалитетна керамика за вашиот дом и бизнис</h1>
-      <p class="lead">
-        Широк избор на керамички плочки, санитарии и модерни туш-кабини.
-        Брза испорака, професионална монтажа и врвен квалитет.
-      </p>
+      <p>Широк избор на керамички плочки, санитарија и модерни туш-кабини. Брза испорака, професионална монтажа и врвен квалитет.</p>
     </div>
   </section>
 
-  <!-- Зошто ние -->
-  <section class="section" id="about">
-    <div class="container">
-      <h2>Зошто Керамика Стил?</h2>
-      <p class="lead">Комбинираме врвен квалитет, модерен дизајн и професионална услуга.</p>
-
-      <div class="features">
-        <div class="feature">
-          <h3>Висок квалитет</h3>
-          <p>Современа керамика од водечки европски производители.</p>
-        </div>
-        <div class="feature">
-          <h3>Брза испорака</h3>
-          <p>Ефикасна логистика и навремена достава низ цела земја.</p>
-        </div>
-        <div class="feature">
-          <h3>Професионална монтажа</h3>
-          <p>Искусни мајстори за беспрекорна изведба и детали.</p>
-        </div>
-        <div class="feature">
-          <h3>Советување и поддршка</h3>
-          <p>Помош при избор, дизајн и количински пресмет.</p>
-        </div>
+  <!-- За нас -->
+  <section id="about">
+    <h2>Зошто Керамика Стил?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Висок квалитет</h3>
+        <p>Современа керамика од водечки европски производители.</p>
+      </div>
+      <div class="feature">
+        <h3>Брза испорака</h3>
+        <p>Ефикасна логистика и навремена достава низ цела земја.</p>
+      </div>
+      <div class="feature">
+        <h3>Професионална монтажа</h3>
+        <p>Искусни мајстори за беспрекорна изведба и детали.</p>
       </div>
     </div>
   </section>
 
   <!-- Производи -->
-  <section class="section" id="products">
-    <div class="container">
-      <h2>Наши производи</h2>
-      <p class="lead">Керамички плочки, санитарии, туш-кабини и додатоци.</p>
-
-      <div class="list-grid">
-        <ul>
-          <li><strong>Керамички плочки</strong> – формати и текстури за бањи, кујни и комерцијални простори.</li>
-          <li><strong>Плочки за под/ѕид</strong> – мат, сјај, анти-слип.</li>
-        </ul>
-        <ul>
-          <li><strong>Санитарии</strong> – мијалници, WC шолји, туш-кади и батерии.</li>
-          <li><strong>Туш-кабини</strong> – модерни стаклени системи со црни профили.</li>
-        </ul>
-      </div>
-    </div>
+  <section id="products">
+    <h2>Наши производи</h2>
+    <ul>
+      <li>Керамички плочки</li>
+      <li>Санитарија</li>
+    </ul>
   </section>
 
-  <!-- Галерија (само пример линкови; може подоцна да додадеш слики) -->
-  <section class="section" id="gallery">
-    <div class="container">
-      <h2>Галерија</h2>
-      <p class="lead">Избрани извадоци од нашите проекти.</p>
-      <ul class="plain">
-        <li>Проект 1</li>
-        <li>Проект 2</li>
-        <li>Проект 3</li>
-        <li>Проект 4</li>
-        <li>Проект 5</li>
-      </ul>
-    </div>
+  <!-- Галерија -->
+  <section id="gallery">
+    <h2>Галерија</h2>
+    <p>Слики од нашите производи и реализирани проекти ќе дојдат овде.</p>
   </section>
 
-  <!-- Побарај понуда (кратка форма) -->
-  <section class="section offer" id="offer">
-    <div class="container">
-      <h2>Побарај понуда</h2>
-      <p class="lead">Испрати ни брза порака – ќе те контактираме во најкус рок.</p>
-
-      <form name="offer" method="POST" data-netlify="true" class="card">
-        <input type="hidden" name="form-name" value="offer"/>
-        <div class="form-row">
-          <label>Име и презиме
-            <input type="text" name="name" required>
-          </label>
-          <label>Телефон
-            <input type="tel" name="phone" required>
-          </label>
-        </div>
-        <label>Порака
-          <textarea name="message" rows="4" placeholder="Краток опис на барањето"></textarea>
-        </label>
-        <button type="submit" class="btn primary">Испрати барање</button>
-      </form>
-    </div>
+  <!-- Контакт -->
+  <section id="contact">
+    <h2>Контакт</h2>
+    <p>Контакт информации или форма за контакт.</p>
   </section>
 
-  <!-- Контакт форма -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <h2>Контакт</h2>
-      <p class="lead">Имаш прашање? Пиши ни.</p>
+  <!-- Побарај понуда -->
+  <section id="offer">
+    <h2>Побарај понуда</h2>
+    <form class="offer-form">
+      <label for="name">Име и презиме:</label>
+      <input type="text" id="name" name="name" required>
 
-      <form name="contact" method="POST" data-netlify="true" class="card">
-        <input type="hidden" name="form-name" value="contact"/>
-        <div class="form-row">
-          <label>Име и презиме
-            <input type="text" name="name" required>
-          </label>
-          <label>Е-пошта
-            <input type="email" name="email" required>
-          </label>
-        </div>
-        <label>Порака
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-        <button type="submit" class="btn primary">Испрати</button>
-      </form>
-    </div>
+      <label for="email">Е-пошта:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Вашата порака:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Испрати</button>
+    </form>
   </section>
 
-  <!-- Подножје -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <small>© <span id="y"></span> Керамика Стил. Сите права задржани.</small>
-      <small><a href="#home">На врв</a></small>
-    </div>
+  <!-- Футер -->
+  <footer>
+    <p>&copy; 2025 Керамика Стил. Сите права задржани.</p>
   </footer>
 
-  <script>
-    // година во footer
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
