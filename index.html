@@ -92,11 +92,27 @@
   </section>
 
 
-  <!-- Галерија -->
-  <section id="gallery">
-    <h2>Галерија</h2>
-    <p>Слики од нашите производи и реализирани проекти ќе дојдат овде.</p>
-  </section>
+ <!-- === ГАЛЕРИЈА === -->
+<section id="gallery">
+  <h2>Галерија</h2>
+
+  <div class="gallery-grid">
+    <!-- Замени ги патеките со твоите слики во /assets/gallery/ -->
+    <img src="assets/gallery/01.jpg" alt="Проект 1">
+    <img src="assets/gallery/02.jpg" alt="Проект 2">
+    <img src="assets/gallery/03.jpg" alt="Проект 3">
+    <img src="assets/gallery/04.jpg" alt="Проект 4">
+    <img src="assets/gallery/05.jpg" alt="Проект 5">
+    <img src="assets/gallery/06.jpg" alt="Проект 6">
+  </div>
+</section>
+
+<!-- Lightbox (останува празно, JS го полни) -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Затвори">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
 
   <!-- Контакт -->
  <section id="contact" class="contact">
