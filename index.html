@@ -1,24 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="mk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Керамика Стил</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Керамика Стил — Квалитетна керамика</title>
+  <meta name="description" content="Керамика Стил — широк избор на керамички плочки, санитарии и туш-кабини. Брза испорака, професионална монтажа и врвен квалитет." />
 
-  <!-- Иконка и стилови -->
-  <link rel="icon" href="favicon.svg" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <!-- ========= HEADER / NAV ========= -->
-  <header class="nav">
+  <!-- ====== Навигација ====== -->
+  <header class="nav" role="banner">
     <div class="container nav-inner">
-      <a href="#home" class="logo">
-        <span class="mark"></span>
-        Керамика Стил
+      <a class="logo" href="#home" aria-label="Керамика Стил - Почетна">
+        <span class="mark" aria-hidden="true"></span>
+        <span>Керамика Стил</span>
       </a>
-      <nav>
+
+      <nav aria-label="Главна навигација">
         <a href="#about">За нас</a>
         <a href="#products">Производи</a>
         <a href="#gallery">Галерија</a>
@@ -28,21 +29,21 @@
     </div>
   </header>
 
-  <!-- ========= HERO (без CTA копчиња внатре) ========= -->
+  <!-- ====== HERO (без копчиња внатре) ====== -->
   <section id="home" class="hero" role="banner">
-    <!-- overlay се контролира преку CSS -->
+    <!-- overlay се контролира во CSS (.hero::before и .hero .overlay) -->
     <div class="overlay" aria-hidden="true"></div>
     <div class="container">
       <h1>Квалитетна керамика за вашиот дом и бизнис</h1>
       <p>
-        Широк избор на керамички плочки, санитарија и модерни туш-кабини.
+        Широк избор на керамички плочки, санитарии и модерни туш-кабини.
         Брза испорака, професионална монтажа и врвен квалитет.
       </p>
-      <!-- Нема копчиња тука по твоја желба -->
+      <!-- Нема CTA тука, по твоја желба -->
     </div>
   </section>
 
-  <!-- ========= ЗОШТО КЕРАМИКА СТИЛ ========= -->
+  <!-- ====== Зошто Керамика Стил? ====== -->
   <section class="section" id="about">
     <div class="container">
       <h2>Зошто Керамика Стил?</h2>
@@ -50,7 +51,7 @@
 
       <div class="cards">
         <article class="card">
-          <img src="assets/why-quality.jpg" alt="Висок квалитет" />
+          <img src="assets/why-quality.jpg" alt="Висок квалитет на материјали" />
           <div class="p">
             <span class="badge">Квалитет</span>
             <h3>Висок квалитет</h3>
@@ -59,7 +60,7 @@
         </article>
 
         <article class="card">
-          <img src="assets/why-fast.jpg" alt="Брза испорака" />
+          <img src="assets/why-stock.jpg" alt="Брза испорака" />
           <div class="p">
             <span class="badge">Испорака</span>
             <h3>Брза испорака</h3>
@@ -77,51 +78,55 @@
         </article>
 
         <article class="card">
-          <img src="assets/why-support.jpg" alt="Поддршка" />
+          <img src="assets/why-support.jpg" alt="Советување и поддршка" />
           <div class="p">
             <span class="badge">Поддршка</span>
             <h3>Советување и поддршка</h3>
-            <p>Помош при избор, дизајн и количински пресметки.</p>
+            <p>Помош при избор, дизајн и комплетен пресмет.</p>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ========= ПРОИЗВОДИ ========= -->
+  <!-- ====== Производи (категории) ====== -->
   <section class="section" id="products">
     <div class="container">
       <h2>Наши производи</h2>
-      <p class="lead">Керамички плочки, санитарија, туш-кабини и додатоци.</p>
+      <p class="lead">Керамички плочки, санитарии, туш-кабини и додатоци.</p>
 
       <div class="cards">
         <article class="card">
-          <img src="assets/tiles.jpg" alt="Керамички плочки" />
+          <img src="assets/prod-tiles.jpg" alt="Керамички плочки" />
           <div class="p">
+            <span class="badge">Плочки</span>
             <h3>Керамички плочки</h3>
-            <p>Формати и текстури за бањи, кујни и комерцијални простори.</p>
+            <p>Големини и текстури за бањи, кујни и комерцијални простори.</p>
           </div>
         </article>
 
         <article class="card">
-          <img src="assets/sanitary.jpg" alt="Санитарија" />
+          <img src="assets/prod-sanitary.jpg" alt="Санитарии" />
           <div class="p">
+            <span class="badge">Санитарија</span>
             <h3>Санитарија</h3>
-            <p>Мијалници, WC-школки, туш-садови и арматури.</p>
+            <p>Миалки, WC шолји, туш сетови и арматури.</p>
           </div>
         </article>
 
         <article class="card">
-          <img src="assets/shower.jpg" alt="Туш-кабини" />
+          <img src="assets/prod-shower.jpg" alt="Туш-кабини" />
           <div class="p">
+            <span class="badge">Туш</span>
             <h3>Туш-кабини</h3>
-            <p>Модерни стаклени системи со црни профили.</p>
+            <p>Модерни стаклени системи со црни профили и дизајн.</p>
           </div>
         </article>
 
         <article class="card">
-          <img src="assets/accessories.jpg" alt="Додатоци" />
+          <img src="assets/prod-accessories.jpg" alt="Додатоци" />
           <div class="p">
+            <span class="badge">Додатоци</span>
             <h3>Додатоци</h3>
             <p>Лепила, фуги, профили и одржување.</p>
           </div>
@@ -130,112 +135,98 @@
     </div>
   </section>
 
-  <!-- ========= ГАЛЕРИЈА ========= -->
+  <!-- ====== Галерија ====== -->
   <section class="section" id="gallery">
     <div class="container">
       <h2>Галерија</h2>
       <p class="lead">Избрани изведби од нашите проекти.</p>
 
+      <!-- Ако немаш слики, слободно остави ја оваа секција празна или додади подоцна -->
       <div class="gallery-grid">
-        <img src="assets/gallery1.jpg" alt="Проект 1" data-lightbox />
-        <img src="assets/gallery2.jpg" alt="Проект 2" data-lightbox />
-        <img src="assets/gallery3.jpg" alt="Проект 3" data-lightbox />
-        <img src="assets/gallery4.jpg" alt="Проект 4" data-lightbox />
-        <img src="assets/gallery5.jpg" alt="Проект 5" data-lightbox />
-        <img src="assets/gallery6.jpg" alt="Проект 6" data-lightbox />
+        <img src="assets/hero.jpg" alt="Проект 1" data-lightbox />
+        <img src="assets/hero.jpg" alt="Проект 2" data-lightbox />
+        <img src="assets/hero.jpg" alt="Проект 3" data-lightbox />
+        <img src="assets/hero.jpg" alt="Проект 4" data-lightbox />
+        <img src="assets/hero.jpg" alt="Проект 5" data-lightbox />
+        <img src="assets/hero.jpg" alt="Проект 6" data-lightbox />
       </div>
-    </div>
-
-    <!-- Лајтбокс -->
-    <div class="lightbox" id="lb" aria-hidden="true">
-      <button class="close" aria-label="Затвори">✕</button>
-      <img src="" alt="Преглед" />
     </div>
   </section>
 
-  <!-- ========= КОНТАКТ ========= -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <div>
+  <!-- ====== Контакт ====== -->
+  <section class="section" id="contact">
+    <div class="container contact">
+      <form name="contact" method="post" data-netlify="true">
         <h2>Контакт</h2>
-        <p class="lead">Испратете ни порака — одговараме брзо.</p>
-        <form name="contact" method="post" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact" />
-          <div class="input">
-            <label for="name">Име и презиме</label>
-            <input id="name" name="name" type="text" required />
-          </div>
-          <div class="input">
-            <label for="email">Е-пошта</label>
-            <input id="email" name="email" type="email" required />
-          </div>
-          <div class="input">
-            <label for="msg">Порака</label>
-            <textarea id="msg" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn primary">Испрати</button>
-        </form>
-      </div>
+        <p class="lead">Испратете ни порака — побарајте понуда.</p>
+
+        <div class="input">
+          <label for="name">Име и презиме</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+
+        <div class="input">
+          <label for="email">Е-пошта</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="input">
+          <label for="msg">Порака</label>
+          <textarea id="msg" name="message" rows="5" required></textarea>
+        </div>
+
+        <button class="btn primary" type="submit">Испрати</button>
+      </form>
 
       <aside class="contact-card">
         <h3>Керамика Стил — Струмица</h3>
-        <p><strong>Тел:</strong> 034 327 533</p>
-        <p><strong>Email:</strong> info@keramika-stil.mk</p>
-        <p><strong>Адреса:</strong> Струмица</p>
-        <p>Работно време: Пон–Саб 08:00–20:00</p>
+        <p>Тел: <a href="tel:+38934327533">034 327 533</a></p>
+        <p>E-mail: <a href="mailto:info@keramika-stil.mk">info@keramika-stil.mk</a></p>
+        <p>Адреса: ул. (дополни адреса)</p>
+        <p>Работно време: Пон–Саб 09:00–19:00</p>
       </aside>
     </div>
   </section>
 
-  <!-- ========= FOOTER ========= -->
-  <footer class="footer">
+  <!-- ====== Footer ====== -->
+  <footer class="footer" role="contentinfo">
     <div class="container content">
       <div>
-        <h3 style="margin:0 0 8px">Керамика Стил</h3>
-        <p>Квалитетна керамика и санитарија за дом и бизнис.</p>
+        <h3 style="margin:0 0 8px;color:#fff">Керамика Стил</h3>
+        <p>Квалитетна керамика, санитарии и туш-решенија. Брза испорака и професионална монтажа.</p>
       </div>
       <div>
-        <h4>Навигација</h4>
-        <p><a href="#home">Почетна</a></p>
-        <p><a href="#products">Производи</a></p>
-        <p><a href="#gallery">Галерија</a></p>
-        <p><a href="#contact">Контакт</a></p>
+        <h4 style="margin:0 0 8px;color:#fff">Навигација</h4>
+        <p><a href="#about">За нас</a><br><a href="#products">Производи</a><br><a href="#gallery">Галерија</a><br><a href="#contact">Контакт</a></p>
       </div>
       <div>
-        <h4>Контакт</h4>
-        <p>034 327 533</p>
-        <p>Струмица</p>
+        <h4 style="margin:0 0 8px;color:#fff">Контакт</h4>
+        <p><a href="tel:+38934327533">034 327 533</a><br>
+           <a href="mailto:info@keramika-stil.mk">info@keramika-stil.mk</a></p>
       </div>
     </div>
     <div class="copy">
-      <div class="container">
-        © <span id="y"></span> Керамика Стил. Сите права задржани.
-      </div>
+      <div class="container">© <span id="y"></span> Керамика Стил. Сите права задржани.</div>
     </div>
   </footer>
 
-  <!-- ========= Скрипти (лајтбокс + година) ========= -->
-  <script src="js/app.js"></script>
-  <script>
-    // fallback ако нема app.js
-    (function(){
-      var y = document.getElementById('y');
-      if(y) y.textContent = new Date().getFullYear();
+  <!-- ====== Lightbox (ако користиш) + мала скрипта за година ====== -->
+  <div class="lightbox" id="lb" aria-hidden="true">
+    <button class="close" aria-label="Затвори" onclick="document.getElementById('lb').classList.remove('active')">×</button>
+    <img alt="Галерија" id="lbimg" />
+  </div>
 
-      // Едноставен лајтбокс ако нема во app.js
-      var lb = document.getElementById('lb');
-      var img = lb ? lb.querySelector('img') : null;
-      document.querySelectorAll('[data-lightbox]').forEach(function(el){
-        el.addEventListener('click', function(){
-          if(!lb || !img) return;
-          img.src = el.src; lb.classList.add('active');
-        });
-      });
-      if(lb){
-        lb.querySelector('.close').addEventListener('click', function(){ lb.classList.remove('active'); });
-        lb.addEventListener('click', function(e){ if(e.target===lb) lb.classList.remove('active'); });
-      }
-    })();
+  <script>
+    // година во футер
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // едноставен lightbox (ако има слики со data-lightbox)
+    const lb = document.getElementById('lb');
+    const lbimg = document.getElementById('lbimg');
+    document.querySelectorAll('[data-lightbox]').forEach(img => {
+      img.addEventListener('click', () => { lbimg.src = img.src; lb.classList.add('active'); });
+    });
+    lb.addEventListener('click', e => { if(e.target === lb) lb.classList.remove('active'); });
   </script>
 </body>
 </html>
