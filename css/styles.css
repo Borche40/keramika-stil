@@ -15,7 +15,7 @@ body{
   background:var(--bg);
   line-height:1.6;
 }
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.container{max-width:900px;margin:0 auto;padding:0 20px}
 
 /* NAVBAR */
 .navbar{
