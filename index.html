@@ -9,119 +9,82 @@
 <body>
   <!-- Навигација -->
   <header>
-    <div class="container nav">
-      <h1 class="logo">Керамика Стил</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">За нас</a></li>
-          <li><a href="#products">Производи</a></li>
-          <li><a href="#gallery">Галерија</a></li>
-          <li><a href="#contact" class="btn">Контакт</a></li>
-          <li><a href="#quote" class="btn primary">Побарај понуда</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Керамика Стил Лого">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">За нас</a></li>
+        <li><a href="#products">Производи</a></li>
+        <li><a href="#gallery">Галерија</a></li>
+        <li><a href="#contact">Контакт</a></li>
+        <li><a href="#offer" class="btn-offer">Побарај понуда</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Hero секција -->
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h2>Квалитетна керамика за вашиот дом и бизнис</h2>
-      <p>Широк избор на керамички плочки, санитарии и модерни туш-кабини. Брза испорака, професионална монтажа и врвен квалитет.</p>
+      <h1>Квалитетна керамика за вашиот дом и бизнис</h1>
+      <p>Широк избор на керамички плочки, санитарија и модерни туш-кабини. Брза испорака, професионална монтажа и врвен квалитет.</p>
     </div>
   </section>
 
   <!-- За нас -->
-  <section class="section" id="about">
-    <div class="container">
-      <h2>Зошто Керамика Стил?</h2>
-      <div class="features">
-        <div class="feature">
-          <h3>Висок квалитет</h3>
-          <p>Современа керамика од водечки европски производители.</p>
-        </div>
-        <div class="feature">
-          <h3>Брза испорака</h3>
-          <p>Ефикасна логистика и навремена достава по цела земја.</p>
-        </div>
-        <div class="feature">
-          <h3>Професионална монтажа</h3>
-          <p>Искусни мајстори за беспрекорна изведба и детали.</p>
-        </div>
+  <section id="about" class="about">
+    <h2>Зошто Керамика Стил?</h2>
+    <div class="about-items">
+      <div>
+        <h3>Висок квалитет</h3>
+        <p>Современа керамика од водечки европски производители.</p>
+      </div>
+      <div>
+        <h3>Брза испорака</h3>
+        <p>Ефикасна логистика и навремена достава низ цела земја.</p>
+      </div>
+      <div>
+        <h3>Професионална монтажа</h3>
+        <p>Искусни мајстори за беспрекорна изведба и детали.</p>
       </div>
     </div>
   </section>
 
   <!-- Производи -->
-  <section class="section" id="products">
-    <div class="container">
-      <h2>Наши производи</h2>
-      <ul>
-        <li>Керамички плочки</li>
-        <li>Санитарии</li>
-        <li>Туш-кабини</li>
-        <li>Мебел за бања</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Галерија -->
-  <section class="section" id="gallery">
-    <div class="container">
-      <h2>Галерија</h2>
-      <p>Слики од изведени проекти ќе стојат тука.</p>
-    </div>
+  <section id="products" class="products">
+    <h2>Наши производи</h2>
+    <ul>
+      <li>Керамички плочки</li>
+      <li>Санитарија</li>
+    </ul>
   </section>
 
   <!-- Контакт -->
-  <section class="section" id="contact">
-    <div class="container">
-      <h2>Контакт</h2>
-      <p>Телефон: +389 70 123 456</p>
-      <p>Email: info@keramika-stil.mk</p>
-      <p>Адреса: ул.Климент Охридски бр.25 Добрејци</p>
-    </div>
+  <section id="contact" class="contact">
+    <h2>Контакт</h2>
+    <p>Телефон: +389 70 123 456</p>
+    <p>Email: info@keramika-stil.mk</p>
   </section>
 
-  <!-- ✅ Побарај понуда -->
-  <section class="section" id="quote">
-    <div class="container">
-      <h2>Побарај понуда</h2>
-      <p>Пополнете го формуларот и ќе ви испратиме персонализирана понуда.</p>
+  <!-- Побарај понуда -->
+  <section id="offer" class="offer">
+    <h2>Побарај понуда</h2>
+    <form>
+      <label for="name">Вашето име:</label>
+      <input type="text" id="name" name="name" required>
 
-      <form name="quote" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="quote">
+      <label for="email">Вашата емаил адреса:</label>
+      <input type="email" id="email" name="email" required>
 
-        <div class="input">
-          <label>Име и презиме</label>
-          <input type="text" name="name" required>
-        </div>
+      <label for="message">Опис на понуда:</label>
+      <textarea id="message" name="message" required></textarea>
 
-        <div class="input">
-          <label>Телефон</label>
-          <input type="tel" name="phone" required>
-        </div>
-
-        <div class="input">
-          <label>Е-пошта</label>
-          <input type="email" name="email" required>
-        </div>
-
-        <div class="input">
-          <label>Што ви е потребно?</label>
-          <textarea name="details" rows="5" placeholder="Опишете ги производите или услугите што ви се потребни" required></textarea>
-        </div>
-
-        <button class="btn primary" type="submit">Испрати барање</button>
-      </form>
-    </div>
+      <button type="submit">Испрати</button>
+    </form>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>© 2025 Керамика Стил. Сите права задржани.</p>
-    </div>
+    <p>&copy; 2025 Керамика Стил. Сите права задржани.</p>
   </footer>
 </body>
 </html>
