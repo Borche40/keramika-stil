@@ -4,13 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Керамика Стил</title>
+
+  <!-- Иконка и стилови -->
+  <link rel="icon" href="favicon.svg" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="container">
-      <h2 class="logo">Керамика Стил</h2>
+
+  <!-- ========= HEADER / NAV ========= -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">
+        <span class="mark"></span>
+        Керамика Стил
+      </a>
       <nav>
         <a href="#about">За нас</a>
         <a href="#products">Производи</a>
@@ -21,94 +28,214 @@
     </div>
   </header>
 
-  <!-- HERO (без CTA копчиња) -->
+  <!-- ========= HERO (без CTA копчиња внатре) ========= -->
   <section id="home" class="hero" role="banner">
+    <!-- overlay се контролира преку CSS -->
     <div class="overlay" aria-hidden="true"></div>
     <div class="container">
       <h1>Квалитетна керамика за вашиот дом и бизнис</h1>
       <p>
-        Широк избор на керамички плочки, санитарија и модерни туш–кабини.
+        Широк избор на керамички плочки, санитарија и модерни туш-кабини.
         Брза испорака, професионална монтажа и врвен квалитет.
       </p>
-      <!-- копчињата овде се целосно отстранети -->
+      <!-- Нема копчиња тука по твоја желба -->
     </div>
   </section>
 
-  <!-- ЗОШТО КЕРАМИКА СТИЛ -->
-  <section class="section" id="why">
+  <!-- ========= ЗОШТО КЕРАМИКА СТИЛ ========= -->
+  <section class="section" id="about">
     <div class="container">
       <h2>Зошто Керамика Стил?</h2>
-      <p class="lead">
-        Комбинираме врвен квалитет, модерен дизајн и професионална услуга.
-      </p>
+      <p class="lead">Комбинираме врвен квалитет, модерен дизајн и професионална услуга.</p>
+
       <div class="cards">
-        <div class="card">
-          <h3>Висок Квалитет</h3>
-          <p>Сите наши производи се со проверен квалитет и долготрајност.</p>
-        </div>
-        <div class="card">
-          <h3>Брза Испорака</h3>
-          <p>Го добивате нарачаниот производ брзо и сигурно.</p>
-        </div>
-        <div class="card">
-          <h3>Монтажа</h3>
-          <p>Нудиме професионална монтажа за вашите потреби.</p>
-        </div>
+        <article class="card">
+          <img src="assets/why-quality.jpg" alt="Висок квалитет" />
+          <div class="p">
+            <span class="badge">Квалитет</span>
+            <h3>Висок квалитет</h3>
+            <p>Селектирана керамика од водечки европски производители.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/why-fast.jpg" alt="Брза испорака" />
+          <div class="p">
+            <span class="badge">Испорака</span>
+            <h3>Брза испорака</h3>
+            <p>Ефикасна логистика и навремена достава низ цела земја.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/why-install.jpg" alt="Професионална монтажа" />
+          <div class="p">
+            <span class="badge">Монтажа</span>
+            <h3>Професионална монтажа</h3>
+            <p>Искусни мајстори за беспрекорна изведба и детали.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/why-support.jpg" alt="Поддршка" />
+          <div class="p">
+            <span class="badge">Поддршка</span>
+            <h3>Советување и поддршка</h3>
+            <p>Помош при избор, дизајн и количински пресметки.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ПРОИЗВОДИ -->
+  <!-- ========= ПРОИЗВОДИ ========= -->
   <section class="section" id="products">
     <div class="container">
-      <h2>Наши Производи</h2>
-      <div class="grid">
-        <div class="product">
+      <h2>Наши производи</h2>
+      <p class="lead">Керамички плочки, санитарија, туш-кабини и додатоци.</p>
+
+      <div class="cards">
+        <article class="card">
           <img src="assets/tiles.jpg" alt="Керамички плочки" />
-          <h3>Керамички плочки</h3>
-        </div>
-        <div class="product">
+          <div class="p">
+            <h3>Керамички плочки</h3>
+            <p>Формати и текстури за бањи, кујни и комерцијални простори.</p>
+          </div>
+        </article>
+
+        <article class="card">
           <img src="assets/sanitary.jpg" alt="Санитарија" />
-          <h3>Санитарија</h3>
-        </div>
-        <div class="product">
-          <img src="assets/shower.jpg" alt="Туш кабини" />
-          <h3>Туш кабини</h3>
-        </div>
+          <div class="p">
+            <h3>Санитарија</h3>
+            <p>Мијалници, WC-школки, туш-садови и арматури.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/shower.jpg" alt="Туш-кабини" />
+          <div class="p">
+            <h3>Туш-кабини</h3>
+            <p>Модерни стаклени системи со црни профили.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/accessories.jpg" alt="Додатоци" />
+          <div class="p">
+            <h3>Додатоци</h3>
+            <p>Лепила, фуги, профили и одржување.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ГАЛЕРИЈА -->
+  <!-- ========= ГАЛЕРИЈА ========= -->
   <section class="section" id="gallery">
     <div class="container">
       <h2>Галерија</h2>
-      <div class="grid gallery">
-        <img src="assets/gallery1.jpg" alt="Галерија 1" />
-        <img src="assets/gallery2.jpg" alt="Галерија 2" />
-        <img src="assets/gallery3.jpg" alt="Галерија 3" />
+      <p class="lead">Избрани изведби од нашите проекти.</p>
+
+      <div class="gallery-grid">
+        <img src="assets/gallery1.jpg" alt="Проект 1" data-lightbox />
+        <img src="assets/gallery2.jpg" alt="Проект 2" data-lightbox />
+        <img src="assets/gallery3.jpg" alt="Проект 3" data-lightbox />
+        <img src="assets/gallery4.jpg" alt="Проект 4" data-lightbox />
+        <img src="assets/gallery5.jpg" alt="Проект 5" data-lightbox />
+        <img src="assets/gallery6.jpg" alt="Проект 6" data-lightbox />
       </div>
     </div>
-  </section>
 
-  <!-- КОНТАКТ -->
-  <section class="section" id="contact">
-    <div class="container">
-      <h2>Контакт</h2>
-      <form>
-        <input type="text" placeholder="Вашето име" required />
-        <input type="email" placeholder="Вашиот емаил" required />
-        <textarea placeholder="Вашата порака" required></textarea>
-        <button type="submit" class="btn primary">Испрати</button>
-      </form>
+    <!-- Лајтбокс -->
+    <div class="lightbox" id="lb" aria-hidden="true">
+      <button class="close" aria-label="Затвори">✕</button>
+      <img src="" alt="Преглед" />
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
+  <!-- ========= КОНТАКТ ========= -->
+  <section class="section contact" id="contact">
     <div class="container">
-      <p>&copy; 2025 Керамика Стил. Сите права се задржани.</p>
+      <div>
+        <h2>Контакт</h2>
+        <p class="lead">Испратете ни порака — одговараме брзо.</p>
+        <form name="contact" method="post" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
+          <div class="input">
+            <label for="name">Име и презиме</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div class="input">
+            <label for="email">Е-пошта</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div class="input">
+            <label for="msg">Порака</label>
+            <textarea id="msg" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn primary">Испрати</button>
+        </form>
+      </div>
+
+      <aside class="contact-card">
+        <h3>Керамика Стил — Струмица</h3>
+        <p><strong>Тел:</strong> 034 327 533</p>
+        <p><strong>Email:</strong> info@keramika-stil.mk</p>
+        <p><strong>Адреса:</strong> Струмица</p>
+        <p>Работно време: Пон–Саб 08:00–20:00</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ========= FOOTER ========= -->
+  <footer class="footer">
+    <div class="container content">
+      <div>
+        <h3 style="margin:0 0 8px">Керамика Стил</h3>
+        <p>Квалитетна керамика и санитарија за дом и бизнис.</p>
+      </div>
+      <div>
+        <h4>Навигација</h4>
+        <p><a href="#home">Почетна</a></p>
+        <p><a href="#products">Производи</a></p>
+        <p><a href="#gallery">Галерија</a></p>
+        <p><a href="#contact">Контакт</a></p>
+      </div>
+      <div>
+        <h4>Контакт</h4>
+        <p>034 327 533</p>
+        <p>Струмица</p>
+      </div>
+    </div>
+    <div class="copy">
+      <div class="container">
+        © <span id="y"></span> Керамика Стил. Сите права задржани.
+      </div>
     </div>
   </footer>
+
+  <!-- ========= Скрипти (лајтбокс + година) ========= -->
+  <script src="js/app.js"></script>
+  <script>
+    // fallback ако нема app.js
+    (function(){
+      var y = document.getElementById('y');
+      if(y) y.textContent = new Date().getFullYear();
+
+      // Едноставен лајтбокс ако нема во app.js
+      var lb = document.getElementById('lb');
+      var img = lb ? lb.querySelector('img') : null;
+      document.querySelectorAll('[data-lightbox]').forEach(function(el){
+        el.addEventListener('click', function(){
+          if(!lb || !img) return;
+          img.src = el.src; lb.classList.add('active');
+        });
+      });
+      if(lb){
+        lb.querySelector('.close').addEventListener('click', function(){ lb.classList.remove('active'); });
+        lb.addEventListener('click', function(e){ if(e.target===lb) lb.classList.remove('active'); });
+      }
+    })();
+  </script>
 </body>
 </html>
