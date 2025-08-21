@@ -86,7 +86,7 @@ body {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.45); /* полупроѕирна црна */
+  background: rgba(0,0,0,0.45);
   z-index: 1;
 }
 
@@ -173,6 +173,46 @@ h2 {
 }
 
 /* =========================
+   ГАЛЕРИЈА
+   ========================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  align-items: center;
+  justify-content: center;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+.lightbox:target {
+  display: flex;
+}
+
+/* =========================
    КОНТАКТ — ИНФО + МАПА
    ========================= */
 .contact .contact-container {
@@ -245,7 +285,7 @@ footer {
   .hero-content p { font-size: 18px; }
 
   .contact .contact-container {
-    grid-template-columns: 1fr; /* инфо над мапа */
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 600px) {
