@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="mk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Керамика Стил</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
 
@@ -12,7 +12,7 @@
   <header>
     <nav class="navbar">
       <div class="logo">
-        <img src="logo.png" alt="Керамика Стил Лого">
+        <img src="logo.png" alt="Керамика Стил Лого"/>
         <span class="site-title">Керамика Стил</span>
       </div>
       <ul class="nav-links">
@@ -25,7 +25,7 @@
     </nav>
   </header>
 
-  <!-- Hero секција -->
+  <!-- Hero -->
   <section class="hero" id="home">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -35,7 +35,7 @@
   </section>
 
   <!-- За нас -->
-  <section id="about">
+  <section id="about" class="reveal">
     <h2>Зошто Керамика Стил?</h2>
     <div class="features">
       <div class="feature">
@@ -53,32 +53,32 @@
     </div>
   </section>
 
-  <!-- Наши производи -->
-  <section id="products" class="products">
+  <!-- Наши производи (placeholder слики за сега) -->
+  <section id="products" class="products reveal">
     <h2>Наши производи</h2>
     <p class="lead">Погледнете дел од нашата понуда со најпродавани категории</p>
 
     <div class="product-grid">
       <div class="product-card">
-        <img src="logo.png" alt="Керамички плочки">
+        <img src="logo.png" alt="Керамички плочки"/>
         <h3>Керамички плочки</h3>
         <p>Современи плочки со врвен квалитет за бањи, кујни и подови.</p>
       </div>
 
       <div class="product-card">
-        <img src="logo.png" alt="Санитарија">
+        <img src="logo.png" alt="Санитарија"/>
         <h3>Санитарија</h3>
         <p>WC школки, лавабоа, туш кабини и многу повеќе.</p>
       </div>
 
       <div class="product-card">
-        <img src="logo.png" alt="Бањарии и туш кабини">
+        <img src="logo.png" alt="Бањарии и туш кабини"/>
         <h3>Бањарии и туш кабини</h3>
         <p>Модерни решенија за комплетно уредување на бањи.</p>
       </div>
 
       <div class="product-card">
-        <img src="logo.png" alt="Алат и монтажа">
+        <img src="logo.png" alt="Алат и монтажа"/>
         <h3>Алат и монтажа</h3>
         <p>Сè што ви треба за професионална инсталација и монтажа.</p>
       </div>
@@ -86,69 +86,64 @@
   </section>
 
   <!-- Галерија -->
-  <section id="gallery">
+  <section id="gallery" class="reveal">
     <h2>Галерија</h2>
     <div class="gallery-grid" id="gallery-grid">
-      <img src="gallery.jpg" alt="Проект 1" data-lightbox>
-      <img src="gallery02.jpg" alt="Проект 2" data-lightbox>
-      <img src="gallery03.jpg" alt="Проект 3" data-lightbox>
-      <img src="gallery04.jpg" alt="Проект 4" data-lightbox>
-      <img src="gallery05.jpg" alt="Проект 5" data-lightbox>
+      <!-- сликите ти се во корен (root) со овие имиња -->
+      <img src="gallery.jpg"   alt="Проект 1" data-lightbox/>
+      <img src="gallery02.jpg" alt="Проект 2" data-lightbox/>
+      <img src="gallery03.jpg" alt="Проект 3" data-lightbox/>
+      <img src="gallery04.jpg" alt="Проект 4" data-lightbox/>
+      <img src="gallery05.jpg" alt="Проект 5" data-lightbox/>
     </div>
   </section>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" aria-hidden="true">
+  <!-- Lightbox (за отворање голема слика) -->
+  <div class="lightbox" aria-hidden="true">
     <button class="close" aria-label="Затвори">&times;</button>
-    <img id="lightbox-img" src="" alt="">
+    <img src="" alt=""/>
   </div>
 
   <!-- Контакт -->
-  <section id="contact" class="contact">
+  <section id="contact" class="contact reveal">
     <h2>Контакт</h2>
     <div class="contact-container">
-
-      <!-- Лева страна: информации -->
       <div class="contact-info">
         <p><strong>📍 Адреса:</strong> ул.Климент Охридски бр.25 Добрејци</p>
         <p><strong>📞 Телефон:</strong> + 034 327 533</p>
         <p><strong>📧 Е-пошта:</strong> info@keramika-stil.mk</p>
-        <p><strong>🕑 Работно време:</strong><br>
-          Пон – Пет: 08:00 – 20:00<br>
-          Сабота: 08:00 – 17:00<br>
+        <p><strong>🕑 Работно време:</strong><br/>
+          Пон – Пет: 08:00 – 20:00<br/>
+          Сабота: 08:00 – 17:00<br/>
           Недела: не работиме
         </p>
       </div>
-
-      <!-- Десна страна: Google Maps -->
       <div class="contact-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.8882049162925!2d22.640647115401235!3d41.44805767858021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a9ff96c2c19c1f%3A0x185725c8da63ba3a!2sКерамика%20Стил!5e0!3m2!1sen!2smk!4v1692649199999!5m2!1sen!2smk"
-          width="100%"
-          height="320"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          width="100%" height="320" style="border:0;" allowfullscreen=""
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-
     </div>
   </section>
 
-  <!-- Побарај понуда -->
-  <section id="offer">
+  <!-- Побарај понуда (mailto fallback) -->
+  <section id="offer" class="reveal">
     <h2>Побарај понуда</h2>
-    <form class="offer-form">
+    <form id="contact-form" class="offer-form">
       <label for="name">Име и презиме:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" required/>
 
       <label for="email">Е-пошта:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" required/>
 
       <label for="message">Вашата порака:</label>
       <textarea id="message" name="message" rows="5" required></textarea>
 
       <button type="submit">Испрати</button>
+
+      <p id="form-ok"  style="display:none;color: #00e6b8; margin-top:10px;">Пораката е успешно подготвена. Проверете ја вашата е-пошта.</p>
+      <p id="form-err" style="display:none;color: #ff6b6b; margin-top:10px;">Настана проблем. Обидете се повторно.</p>
     </form>
   </section>
 
@@ -158,6 +153,6 @@
   </footer>
 
   <!-- JS -->
-  <script src="app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
