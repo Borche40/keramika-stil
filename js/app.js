@@ -1,268 +1,147 @@
-/* ---------------------------
-   Основни стилови
----------------------------- */
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  color: #dfe6e9;
-  background: #0b0b0c;
-}
+// ============================
+// I18N: динамички преводи од JSON (MK/EN)
+// ============================
+(async function i18nSetup(){
+  const LS_KEY = 'lang';
+  const defaultLang = 'mk';
+  let current = localStorage.getItem(LS_KEY) || defaultLang;
 
-/* ---------------------------
-   Навигација (sticky)
----------------------------- */
-.navbar {
-  position: sticky; top: 0; z-index: 1000;
-  display: flex; justify-content: space-between; align-items: center;
-  background: rgba(15,15,15,.65);
-  backdrop-filter: blur(6px);
-  padding: 10px 40px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-}
-.logo { display: flex; align-items: center; gap: 12px; }
-.logo img { height: 70px; width: auto; display: block; filter: drop-shadow(0 0 6px rgba(0,255,224,.35)); }
-.site-title { font-size: 38px; font-weight: 800; color: #fff; letter-spacing: .5px; }
-.nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
-.nav-links li { display: inline-flex; }
-.nav-links a {
-  text-decoration: none; color: #eaeaea; font-size: 18px; font-weight: 600;
-  padding: 6px 0; transition: all .25s ease;
-}
-.nav-links a:hover { color: #00ffe0; border-bottom: 2px solid #00ffe0; }
-.btn-offer {
-  background: transparent; color: #fff !important;
-  border: 2px solid #00ffe0; border-radius: 8px;
-  padding: 8px 16px;
-  box-shadow: 0 0 12px rgba(0,255,224,.25) inset, 0 0 10px rgba(0,255,224,.15);
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-}
-.btn-offer:hover{
-  background: rgba(0,255,224,.12);
-  box-shadow: 0 0 18px rgba(0,255,224,.45) inset, 0 0 22px rgba(0,255,224,.35), 0 0 44px rgba(0,255,224,.25);
-  transform: translateY(-1px);
-}
+  const $ = (sel, root=document) => root.querySelector(sel);
+  const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
 
-/* ---------------------------
-   Language switcher
----------------------------- */
-.lang-switch { display: flex; gap: 8px; margin-left: 14px; }
-.lang-switch button{
-  background: transparent; color:#eaeaea; border:1px solid rgba(255,255,255,.25);
-  padding:6px 10px; border-radius:8px; cursor:pointer; font-weight:700;
-}
-.lang-switch button:hover{ border-color:#00ffe0; color:#00ffe0; }
-.lang-switch button.active{
-  border-color:#00ffe0; box-shadow:0 0 10px rgba(0,255,224,.35) inset; color:#00ffe0;
-}
+  async function loadLang(lang){
+    try{
+      const res = await fetch(`lang/${lang}.json`, {cache:'no-store'});
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      return await res.json();
+    }catch(e){
+      console.warn('i18n load error', e);
+      return null;
+    }
+  }
 
-/* ---------------------------
-   Hero
----------------------------- */
-.hero {
-  position: relative;
-  background: url('../hero.jpg') center/cover no-repeat;
-  height: 90vh; min-height: 520px;
-  display: flex; align-items: center; justify-content: center;
-  text-align: center; color: #fff; overflow: hidden;
-}
-.hero-overlay{
-  background: radial-gradient(1200px 600px at 10% 20%, rgba(0,255,224,0.08), transparent 60%),
-              radial-gradient(900px 900px at 80% 20%, rgba(255,60,240,0.06), transparent 60%),
-              rgba(0,0,0,0.40);
-  animation: gradientMove 16s linear infinite alternate;
-  position:absolute; inset:0;
-}
-@keyframes gradientMove{
-  0%   { background-position: 0% 0%, 100% 0%, 0 0; }
-  100% { background-position: 10% 10%, 90% 5%, 0 0; }
-}
-.hero-content { position: relative; z-index: 1; max-width: 900px; padding: 20px; }
-.hero-content h1{
-  font-size: clamp(34px, 5vw, 54px);
-  margin: 0 0 18px; font-weight: 800;
-  text-shadow: 0 0 14px rgba(0,255,224,.45), 0 0 28px rgba(0,255,224,.25);
-  animation: glowPulse 3.2s ease-in-out infinite;
-}
-@keyframes glowPulse{
-  0%,100%{ text-shadow: 0 0 8px rgba(0,255,224,.35), 0 0 18px rgba(0,255,224,.18); }
-  50%    { text-shadow: 0 0 16px rgba(0,255,224,.65), 0 0 36px rgba(0,255,224,.35); }
-}
-.hero-content p { font-size: clamp(18px, 2.3vw, 22px); margin: 0; }
+  function applyTranslations(dict){
+    if(!dict) return;
+    $$('[data-i18n]').forEach(el=>{
+      const key = el.getAttribute('data-i18n');
+      const val = key.split('.').reduce((acc,k)=> acc && acc[k], dict);
+      if(typeof val === 'string'){
+        if(el.tagName === 'INPUT' || el.tagName === 'TEXTAREA'){
+          el.setAttribute('placeholder', val);
+        }else{
+          el.innerHTML = val;
+        }
+      }
+    });
+    $$('.lang-switch button').forEach(b=>{
+      b.classList.toggle('active', b.getAttribute('data-lang') === current);
+    });
+    document.documentElement.setAttribute('lang', current);
+  }
 
-/* ---------------------------
-   Секции (општо)
----------------------------- */
-section { padding: 60px 40px; }
-h2 {
-  color: #fff; margin: 0 0 20px; font-size: 32px; position: relative;
-}
-h2::after{
-  content:""; position:absolute; left:0; bottom:-8px;
-  width:110px; height:3px;
-  background: linear-gradient(90deg, #00ffe0, #ff3cf0);
-  box-shadow: 0 0 12px rgba(0,255,224,.5), 0 0 16px rgba(255,60,240,.35);
-  border-radius: 999px;
-}
+  async function setLang(lang){
+    current = lang;
+    localStorage.setItem(LS_KEY, lang);
+    const dict = await loadLang(lang);
+    applyTranslations(dict);
+  }
 
-.features { display: flex; gap: 20px; }
-.feature {
-  flex: 1; padding: 20px; background: #121214;
-  border:1px solid rgba(255,255,255,.06);
-  border-radius: 10px; text-align: center; color:#dcdde1;
-}
+  await setLang(current);
 
-/* ---------------------------
-   Наши производи — картички
----------------------------- */
-.products { background: #0f0f10; text-align: center; }
-.products .lead { color: #b8c1c6; margin: -6px 0 28px; }
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
-}
-.product-card {
-  background: #0f0f10; color:#dcdde1;
-  border:1px solid rgba(255,255,255,.06);
-  border-radius: 12px; overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0,0,0,.35);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-  text-align: left;
-}
-.product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0,0,0,.5);
-  border-color: rgba(0,255,224,.25);
-}
-.product-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
-.product-card h3 { margin: 14px 14px 6px; font-size: 19px; color: #fff; }
-.product-card p  { margin: 0 14px 16px; color: #b8c1c6; font-size: 15px; line-height: 1.55; }
+  $$('.lang-switch button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const lang = btn.getAttribute('data-lang');
+      setLang(lang);
+    });
+  });
+})();
 
-/* ---------------------------
-   Галерија — Grid + Lightbox
----------------------------- */
-#gallery { background: #0b0b0c; }
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
-  margin-top: 20px;
-}
-.gallery-grid img {
-  width: 100%; height: 220px; object-fit: cover; display: block;
-  border-radius: 10px; cursor: pointer; border: 1px solid rgba(255,255,255,.06);
-  box-shadow: 0 2px 10px rgba(0,0,0,.35);
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-}
-.gallery-grid img:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 0 14px rgba(0,255,224,.25), 0 12px 26px rgba(0,0,0,.55);
-  filter: saturate(1.1);
-}
+// ============================
+// Smooth scroll за anchor линкови
+// ============================
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
 
-/* Lightbox */
-.lightbox{
-  position:fixed; inset:0;
-  background: radial-gradient(800px 400px at 60% 20%, rgba(0,255,224,.08), transparent 40%),
-              rgba(0,0,0,.88);
-  display:none; justify-content:center; align-items:center;
-  z-index:2000;
-}
-.lightbox.active{ display:flex; }
-.lightbox img{
-  max-width:92vw; max-height:90vh; border-radius:12px;
-  box-shadow: 0 0 24px rgba(0,255,224,.25), 0 0 48px rgba(255,60,240,.18);
-}
-.lightbox .close{
-  position:absolute; top:18px; right:18px;
-  width: 42px; height: 42px; border-radius: 50%;
-  background: #fff; color: #111; border: 0; font-size: 26px; font-weight: 700;
-  cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,.25);
-}
+// ============================
+// LIGHTBOX за галерија
+// ============================
+(function(){
+  const lb = document.querySelector('.lightbox');
+  if(!lb) return;
+  const lbImg = lb.querySelector('img');
+  const close = lb.querySelector('.close');
 
-/* ---------------------------
-   Контакт — инфо + мапа
----------------------------- */
-.contact .contact-container {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 30px; align-items: start;
-}
-.contact .contact-info p { font-size: 17px; margin: 10px 0; }
-.contact .contact-info strong { color: #00ffe0; }
-.contact .contact-map iframe {
-  width: 100%; height: 320px; border: 0; border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,.4);
-}
+  document.querySelectorAll('#gallery img[data-lightbox]').forEach(img=>{
+    img.addEventListener('click', ()=>{
+      lbImg.src = img.getAttribute('data-full') || img.src;
+      lb.classList.add('active');
+      lb.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+    });
+  });
 
-/* ---------------------------
-   Побарај понуда — форма
----------------------------- */
-.offer-form {
-  max-width: 620px; margin: 0 auto;
-  display: flex; flex-direction: column; gap: 14px;
-}
-.offer-form label { font-weight: 600; }
-.offer-form input, .offer-form textarea {
-  padding: 11px 12px; font-size: 16px;
-  border: 1px solid #333;
-  background:#121214; color:#eaeaea;
-  border-radius: 8px; outline: none;
-  transition: border-color .2s ease, box-shadow .2s ease;
-}
-.offer-form input:focus, .offer-form textarea:focus {
-  border-color: #00ffe0; box-shadow: 0 0 0 3px rgba(0,255,224,.15);
-}
-.offer-form button {
-  background: transparent; color: #fff; border: 2px solid #00ffe0; padding: 12px;
-  font-size: 18px; border-radius: 8px; cursor: pointer;
-  transition: background .2s ease, box-shadow .2s ease, transform .18s ease;
-  box-shadow: 0 0 12px rgba(0,255,224,.25) inset, 0 0 10px rgba(0,255,224,.15);
-}
-.offer-form button:hover {
-  background: rgba(0,255,224,.12);
-  box-shadow: 0 0 18px rgba(0,255,224,.45) inset, 0 0 22px rgba(0,255,224,.35), 0 0 44px rgba(0,255,224,.25);
-  transform: translateY(-1px);
-}
+  function hide(){
+    lb.classList.remove('active');
+    lb.setAttribute('aria-hidden','true');
+    lbImg.src = '';
+    document.body.style.overflow = '';
+  }
+  close.addEventListener('click', hide);
+  lb.addEventListener('click', e=>{ if(e.target===lb) hide(); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') hide(); });
+})();
 
-/* ---------------------------
-   Футер
----------------------------- */
-footer {
-  background: #0f0f10; color: #eaeaea; text-align: center; padding: 22px;
-  border-top:1px solid rgba(255,255,255,.06);
-}
+// ============================
+// Scroll Reveal (IntersectionObserver)
+// ============================
+(() => {
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+})();
 
-/* ---------------------------
-   Scroll Reveal
----------------------------- */
-.reveal{
-  opacity:0; transform: translateY(16px) scale(.98);
-  filter: blur(2px);
-  transition: opacity .6s ease, transform .6s ease, filter .6s ease;
-}
-.reveal.is-visible{
-  opacity:1; transform: translateY(0) scale(1);
-  filter: blur(0);
-}
+// ============================
+// Contact form: Mailto fallback
+// ============================
+document.getElementById('contact-form')?.addEventListener('submit', (e)=>{
+  e.preventDefault();
+  const form = e.target;
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const message = form.message.value.trim();
 
-/* ---------------------------
-   Responsive
----------------------------- */
-@media (max-width: 980px) {
-  .site-title { font-size: 32px; }
-  .logo img { height: 62px; }
-  .hero-content h1 { font-size: clamp(30px, 6vw, 46px); }
-}
-@media (max-width: 860px) {
-  .nav-links { gap: 16px; }
-  .nav-links a { font-size: 16px; }
-  .contact .contact-container { grid-template-columns: 1fr; }
-}
-@media (max-width: 600px) {
-  section { padding: 44px 20px; }
-  .gallery-grid img { height: 190px; }
-  .product-card img { height: 180px; }
-  .contact .contact-map iframe { height: 260px; }
-}
+  const mail = 'keramikastil@yahoo.com.mk'; // адресата што ја даде
+  const subject = encodeURIComponent('Порака од веб-сајтот — ' + name);
+  const body = encodeURIComponent(
+    'Име: ' + name +
+    '\nЕ-пошта: ' + email +
+    '\n\nПорака:\n' + message
+  );
+
+  window.location.href = `mailto:${mail}?subject=${subject}&body=${body}`;
+
+  const ok = document.getElementById('form-ok');
+  const err = document.getElementById('form-err');
+  if(ok) ok.style.display = 'block';
+  if(err) err.style.display = 'none';
+  form.reset();
+});
