@@ -13,15 +13,22 @@
     <nav class="navbar">
       <div class="logo">
         <img src="logo.png" alt="Керамика Стил Лого"/>
-        <span class="site-title">Керамика Стил</span>
+        <span class="site-title" data-i18n="site.title">Керамика Стил</span>
       </div>
+
       <ul class="nav-links">
-        <li><a href="#about">За нас</a></li>
-        <li><a href="#products">Производи</a></li>
-        <li><a href="#gallery">Галерија</a></li>
-        <li><a href="#contact">Контакт</a></li>
-        <li><a href="#offer" class="btn-offer">Побарај понуда</a></li>
+        <li><a href="#about" data-i18n="nav.about">За нас</a></li>
+        <li><a href="#products" data-i18n="nav.products">Производи</a></li>
+        <li><a href="#gallery" data-i18n="nav.gallery">Галерија</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Контакт</a></li>
+        <li><a href="#offer" class="btn-offer" data-i18n="nav.offer">Побарај понуда</a></li>
       </ul>
+
+      <!-- Language switcher -->
+      <div class="lang-switch">
+        <button type="button" data-lang="mk" aria-label="Македонски">MK</button>
+        <button type="button" data-lang="en" aria-label="English">EN</button>
+      </div>
     </nav>
   </header>
 
@@ -29,67 +36,66 @@
   <section class="hero" id="home">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Квалитетна керамика за вашиот дом и бизнис</h1>
-      <p>Широк избор на керамички плочки, санитарија и модерни туш-кабини. Брза испорака, професионална монтажа и врвен квалитет.</p>
+      <h1 data-i18n="hero.title">Квалитетна керамика за вашиот дом и бизнис</h1>
+      <p data-i18n="hero.subtitle">Широк избор на керамички плочки, санитарија и модерни туш-кабини. Брза испорака, професионална монтажа и врвен квалитет.</p>
     </div>
   </section>
 
   <!-- За нас -->
   <section id="about" class="reveal">
-    <h2>Зошто Керамика Стил?</h2>
+    <h2 data-i18n="about.heading">Зошто Керамика Стил?</h2>
     <div class="features">
       <div class="feature">
-        <h3>Висок квалитет</h3>
-        <p>Современа керамика од водечки европски производители.</p>
+        <h3 data-i18n="about.cards.quality.title">Висок квалитет</h3>
+        <p data-i18n="about.cards.quality.text">Современа керамика од водечки европски производители.</p>
       </div>
       <div class="feature">
-        <h3>Брза испорака</h3>
-        <p>Ефикасна логистика и навремена достава низ цела земја.</p>
+        <h3 data-i18n="about.cards.delivery.title">Брза испорака</h3>
+        <p data-i18n="about.cards.delivery.text">Ефикасна логистика и навремена достава низ цела земја.</p>
       </div>
       <div class="feature">
-        <h3>Професионална монтажа</h3>
-        <p>Искусни мајстори за беспрекорна изведба и детали.</p>
+        <h3 data-i18n="about.cards.install.title">Професионална монтажа</h3>
+        <p data-i18n="about.cards.install.text">Искусни мајстори за беспрекорна изведба и детали.</p>
       </div>
     </div>
   </section>
 
-  <!-- Наши производи (placeholder слики за сега) -->
+  <!-- Наши производи -->
   <section id="products" class="products reveal">
-    <h2>Наши производи</h2>
-    <p class="lead">Погледнете дел од нашата понуда со најпродавани категории</p>
+    <h2 data-i18n="products.heading">Наши производи</h2>
+    <p class="lead" data-i18n="products.lead">Погледнете дел од нашата понуда со најпродавани категории</p>
 
-    <div class="product-grid">
+    <div class="product-grid" id="products-grid">
       <div class="product-card">
-        <img src="logo.png" alt="Керамички плочки"/>
-        <h3>Керамички гранитни плочки</h3>
-        <p>Современи плочки со врвен квалитет за бањи, кујни и подови.</p>
+        <img src="logo.png" alt="Керамички гранитни плочки"/>
+        <h3 data-i18n="products.cards.tiles.title">Керамички гранитни плочки</h3>
+        <p data-i18n="products.cards.tiles.text">Современи плочки со врвен квалитет за бањи, кујни и подови.</p>
       </div>
 
       <div class="product-card">
         <img src="logo.png" alt="Санитарија"/>
-        <h3>Санитарија</h3>
-        <p>WC школки, лавабоа, туш кабини и многу повеќе.</p>
+        <h3 data-i18n="products.cards.sanitary.title">Санитарија</h3>
+        <p data-i18n="products.cards.sanitary.text">WC школки, лавабоа, туш кабини и многу повеќе.</p>
       </div>
 
       <div class="product-card">
-        <img src="logo.png" alt="Бањарии и туш кабини"/>
-        <h3>Бањи и туш кабини</h3>
-        <p>Модерни решенија за комплетно уредување на бањи.</p>
+        <img src="logo.png" alt="Бањи и туш кабини"/>
+        <h3 data-i18n="products.cards.bath.title">Бањи и туш кабини</h3>
+        <p data-i18n="products.cards.bath.text">Модерни решенија за комплетно уредување на бањи.</p>
       </div>
 
       <div class="product-card">
         <img src="logo.png" alt="Алат и монтажа"/>
-        <h3>Алат и монтажа</h3>
-        <p>Сè што ви треба за професионална инсталација и монтажа.</p>
+        <h3 data-i18n="products.cards.tools.title">Алат и монтажа</h3>
+        <p data-i18n="products.cards.tools.text">Сè што ви треба за професионална инсталација и монтажа.</p>
       </div>
     </div>
   </section>
 
   <!-- Галерија -->
   <section id="gallery" class="reveal">
-    <h2>Галерија</h2>
+    <h2 data-i18n="gallery.heading">Галерија</h2>
     <div class="gallery-grid" id="gallery-grid">
-      <!-- сликите ти се во корен (root) со овие имиња -->
       <img src="gallery.jpg"   alt="Проект 1" data-lightbox/>
       <img src="gallery02.jpg" alt="Проект 2" data-lightbox/>
       <img src="gallery03.jpg" alt="Проект 3" data-lightbox/>
@@ -98,7 +104,7 @@
     </div>
   </section>
 
-  <!-- Lightbox (за отворање голема слика) -->
+  <!-- Lightbox -->
   <div class="lightbox" aria-hidden="true">
     <button class="close" aria-label="Затвори">&times;</button>
     <img src="" alt=""/>
@@ -106,16 +112,17 @@
 
   <!-- Контакт -->
   <section id="contact" class="contact reveal">
-    <h2>Контакт</h2>
+    <h2 data-i18n="contact.heading">Контакт</h2>
     <div class="contact-container">
       <div class="contact-info">
-        <p><strong>📍 Адреса:</strong> ул.Климент Охридски бр.25 Добрејци</p>
-        <p><strong>📞 Телефон:</strong> + 034 327 533</p>
-        <p><strong>📧 Е-пошта:</strong> keramikastil@yahoo.com.mk</p>
-        <p><strong>🕑 Работно време:</strong><br/>
-          Пон – Пет: 08:00 – 20:00<br/>
-          Сабота: 08:00 – 17:00<br/>
-          Недела: не работиме
+        <p><strong data-i18n="contact.addr.label">📍 Адреса:</strong> <span data-i18n="contact.addr.value">ул.Климент Охридски бр.25 Добрејци</span></p>
+        <p><strong data-i18n="contact.phone.label">📞 Телефон:</strong> <span data-i18n="contact.phone.value">+ 034 327 533</span></p>
+        <p><strong data-i18n="contact.email.label">📧 Е-пошта:</strong> <span data-i18n="contact.email.value">keramikastil@yahoo.com.mk</span></p>
+        <p>
+          <strong data-i18n="contact.hours.label">🕑 Работно време:</strong><br/>
+          <span data-i18n="contact.hours.value">
+            Пон – Пет: 08:00 – 20:00<br/>Сабота: 08:00 – 17:00<br/>Недела: не работиме
+          </span>
         </p>
       </div>
       <div class="contact-map">
@@ -127,29 +134,33 @@
     </div>
   </section>
 
-  <!-- Побарај понуда (mailto fallback) -->
+  <!-- Побарај понуда -->
   <section id="offer" class="reveal">
-    <h2>Побарај понуда</h2>
+    <h2 data-i18n="offer.heading">Побарај понуда</h2>
     <form id="contact-form" class="offer-form">
-      <label for="name">Име и презиме:</label>
+      <label for="name" data-i18n="offer.form.name.label">Име и презиме:</label>
       <input type="text" id="name" name="name" required/>
 
-      <label for="email">Е-пошта:</label>
+      <label for="email" data-i18n="offer.form.email.label">Е-пошта:</label>
       <input type="email" id="email" name="email" required/>
 
-      <label for="message">Вашата порака:</label>
+      <label for="message" data-i18n="offer.form.msg.label">Вашата порака:</label>
       <textarea id="message" name="message" rows="5" required></textarea>
 
-      <button type="submit">Испрати</button>
+      <button type="submit" data-i18n="offer.form.submit">Испрати</button>
 
-      <p id="form-ok"  style="display:none;color: #00e6b8; margin-top:10px;">Пораката е успешно подготвена. Проверете ја вашата е-пошта.</p>
-      <p id="form-err" style="display:none;color: #ff6b6b; margin-top:10px;">Настана проблем. Обидете се повторно.</p>
+      <p id="form-ok"  style="display:none;color: #00e6b8; margin-top:10px;" data-i18n="offer.form.ok">
+        Пораката е успешно подготвена. Проверете ја вашата е-пошта.
+      </p>
+      <p id="form-err" style="display:none;color: #ff6b6b; margin-top:10px;" data-i18n="offer.form.err">
+        Настана проблем. Обидете се повторно.
+      </p>
     </form>
   </section>
 
   <!-- Футер -->
   <footer>
-    <p>&copy; 2025 Керамика Стил. Сите права се задржани.</p>
+    <p>&copy; 2025 <span data-i18n="site.title">Керамика Стил</span>. <span data-i18n="footer.rights">Сите права задржани.</span></p>
   </footer>
 
   <!-- JS -->
