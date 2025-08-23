@@ -45,6 +45,19 @@ body {
 }
 
 /* ---------------------------
+   Language switcher
+---------------------------- */
+.lang-switch { display: flex; gap: 8px; margin-left: 14px; }
+.lang-switch button{
+  background: transparent; color:#eaeaea; border:1px solid rgba(255,255,255,.25);
+  padding:6px 10px; border-radius:8px; cursor:pointer; font-weight:700;
+}
+.lang-switch button:hover{ border-color:#00ffe0; color:#00ffe0; }
+.lang-switch button.active{
+  border-color:#00ffe0; box-shadow:0 0 10px rgba(0,255,224,.35) inset; color:#00ffe0;
+}
+
+/* ---------------------------
    Hero
 ---------------------------- */
 .hero {
