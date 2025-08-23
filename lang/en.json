@@ -1,0 +1,52 @@
+{
+  "site": { "title": "Ceramika Stil" },
+  "nav": {
+    "about": "About",
+    "products": "Products",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "offer": "Get a Quote"
+  },
+  "hero": {
+    "title": "Premium ceramics for your home and business",
+    "subtitle": "A wide selection of ceramic tiles, sanitary ware and modern shower cabins. Fast delivery, professional installation and top quality."
+  },
+  "about": {
+    "heading": "Why Ceramika Stil?",
+    "cards": {
+      "quality": { "title": "High quality", "text": "Modern ceramics from leading European manufacturers." },
+      "delivery": { "title": "Fast delivery", "text": "Efficient logistics and on-time delivery nationwide." },
+      "install":  { "title": "Professional installation", "text": "Experienced craftsmen for flawless execution and details." }
+    }
+  },
+  "products": {
+    "heading": "Our Products",
+    "lead": "Explore part of our offer with best-selling categories",
+    "cards": {
+      "tiles":   { "title": "Porcelain tiles", "text": "Top-quality tiles for bathrooms, kitchens and floors." },
+      "sanitary":{ "title": "Sanitary ware", "text": "Toilets, basins, shower cabins and more." },
+      "bath":    { "title": "Bathrooms & showers", "text": "Modern solutions for complete bathroom furnishing." },
+      "tools":   { "title": "Tools & installation", "text": "Everything you need for professional installation." }
+    }
+  },
+  "gallery": { "heading": "Gallery" },
+  "contact": {
+    "heading": "Contact",
+    "addr":  { "label": "📍 Address:",  "value": "ul. Kliment Ohridski 25, Dobrejci" },
+    "phone": { "label": "📞 Phone:", "value": "+ 034 327 533" },
+    "email": { "label": "📧 E-mail:", "value": "keramikastil@yahoo.com.mk" },
+    "hours": { "label": "🕑 Working hours:", "value": "Mon – Fri: 08:00 – 20:00<br/>Saturday: 08:00 – 17:00<br/>Sunday: closed" }
+  },
+  "offer": {
+    "heading": "Get a Quote",
+    "form": {
+      "name":  { "label": "Full name:" },
+      "email": { "label": "E-mail:" },
+      "msg":   { "label": "Your message:" },
+      "submit": "Send",
+      "ok":  "Your message has been prepared. Please check your e-mail client.",
+      "err": "There was a problem. Please try again."
+    }
+  },
+  "footer": { "rights": "All rights reserved." }
+}
